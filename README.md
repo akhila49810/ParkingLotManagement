@@ -5,7 +5,7 @@ A full-stack ASP.NET Core MVC web application for managing a parking lot.
 
 | Layer | Technology |
 |---|---|
-| Backend | ASP.NET Core 8 MVC (Server-Side Rendered) |
+| Backend | ASP.NET Core 9 MVC (Server-Side Rendered) |
 | Database | SQL Server + Dapper (no Entity Framework) |
 | Frontend | Plain JavaScript (ES6+), no frameworks |
 | CSS | Bootstrap 5.3 |
