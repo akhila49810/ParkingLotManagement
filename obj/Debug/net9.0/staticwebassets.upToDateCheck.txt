@@ -1,0 +1,4 @@
+wwwroot\css\site.css
+wwwroot\js\site.js
+C:\Users\dande\Desktop\Interview\ParkingLotManager\ParkingLot\wwwroot\css\site.css
+C:\Users\dande\Desktop\Interview\ParkingLotManager\ParkingLot\wwwroot\js\site.js

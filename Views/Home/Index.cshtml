@@ -1,0 +1,59 @@
+@model ParkingLot.Models.ParkingSnapshotViewModel
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Parking Lot Manager";
+}
+
+<div class="parking-wrapper">
+   
+    <div class="area area-a">
+        <div class="area-label">Area A</div>
+        <div class="control-panel">
+            <h5 class="panel-title">Car Check-In / Out</h5>
+
+            <div class="form-group mb-4">
+                <label class="form-label fw-semibold" for="tagNumber">Tag Number:</label>
+                <input type="text"
+                       id="tagNumber"
+                       class="form-control form-control-lg tag-input"
+                       placeholder="e.g. ABC-1234"
+                       autocomplete="off"
+                       maxlength="20" />
+            </div>
+
+            <div class="btn-group-actions mb-3">
+                <button id="btnIn" class="btn btn-in" onclick="handleCheckIn()">
+                    In
+                </button>
+                <button id="btnOut" class="btn btn-out" onclick="handleCheckOut()">
+                    Out
+                </button>
+            </div>
+
+           
+            <div id="alertBox" class="alert-box" style="display:none;"></div>
+
+           
+            <div id="checkoutResult" class="checkout-result" style="display:none;">
+                <div class="result-tag" id="resultTag"></div>
+                <div class="result-label">Total Amount Due</div>
+                <div class="result-amount" id="resultAmount"></div>
+            </div>
+
+            <hr class="my-4" />
+
+            <button class="btn btn-stats w-100" onclick="openStats()">
+                Stats
+            </button>
+        </div>
+    </div>
+
+    
+    <div class="area area-b">
+        <div class="area-label">Area B</div>
+        <div id="snapshotPanel" class="snapshot-panel">
+            @await Html.PartialAsync("_Snapshot", Model)
+        </div>
+    </div>
+</div>
